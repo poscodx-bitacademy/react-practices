@@ -4,7 +4,7 @@ ex02: 번들링 환경(webpack.config.js) 설정
 $ npm i -D express webpack webpack-cli
 
 2. 번들링 환경(webpack.config.js) 설정
-   1) enetry
+   1) entry
    2) output
 
 3. 스크립팅

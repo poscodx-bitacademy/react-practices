@@ -4,7 +4,7 @@ ex04: webpack 개발 서버
 $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader
 
 2. 번들링 환경(webpack.config.js) 설정
-   1) enetry
+   1) entry
    2) output
    3) devServer
 
