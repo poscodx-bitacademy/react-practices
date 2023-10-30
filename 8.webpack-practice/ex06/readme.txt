@@ -8,12 +8,14 @@ $ npm i -D webpack webpack-cli webpack-dev-server css-loader style-loader sass-l
    2) output
    3) devServer
    4) module
+      output: {
+        assetModuleFilename: 'assets/images/[hash][ext]'
+      }
       module: {
           rules:[{
-              test: /\.(c|sa|sc)ss$/i,
-              use:['style-loader', 'css-loader', 'sass-loader']
-          }]
-      }   
+              test: /\.(png|gif|jp?eg|svg|ico|tif?f|bmp)/i,
+              type: 'asset/resource'
+          }]   
 
 3. 스크립팅
   "scripts": {
