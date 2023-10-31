@@ -1,12 +1,13 @@
-ex08: JSX tutorial
-01. 특징1: HTML과의 차이점
-02. 특징2: Sigle Root
-03. 함수 컴포넌트
-04. Pure React(React API) 컴포넌트
-05. 클래스 컴포넌트
-06. 특징3: JSX 표현식 표기법: { javascript expression }
-07. Comment
+ex01: property
+1.  컴포넌트의 데이터
+2.  부모에서 자식으로 전달된다.
+    - 컴포넌트 통신(Data Flow)
+    - Top -> Down
+3.  자식에서 변경 불가
+4.  부모가 소유한 데이터 
 
+src/01: 함수 컴포넌트
+src:02: Data Flow
 
 
 ====================================================================================
