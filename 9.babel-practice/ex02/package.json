@@ -1,0 +1,16 @@
+{
+  "name": "ex02",
+  "version": "1.0.0",
+  "description": "2.  Babel Cli\r     1)  설치\r         $ npm i -D @babel/core @babel/cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2"
+  }
+}
