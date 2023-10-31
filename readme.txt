@@ -2,7 +2,7 @@ React Practice
 1. 기본개념(Basics) **
 2. 컴포넌트(Component) ***
 3. 라우팅(Routing) **
-4. Flux: Redux*
+4. Flux: Redux**
 5. Testing(Rest)
 6. Perforamance
 7. 통합개발(Integration) **
