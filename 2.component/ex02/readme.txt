@@ -20,7 +20,12 @@ ex02: Component Styling
    - 실행
      $ npm run debug src=05
 
-6) CSS in JS: Styled Component
+6) CSS in JS: Styled Component,..... Less & Styleable
+   - $ npm i styled-components
+   - css-loader option: {module: true}
+   - 실행
+     $ npm run debug src=06
+   
 7) React Modal
 8) Modal: Material UI
 
