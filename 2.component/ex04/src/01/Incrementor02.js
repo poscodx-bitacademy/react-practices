@@ -7,7 +7,7 @@ export default function ({begin, step}) {
         <div>
             <button
                 onClick={e => {
-                    setVal(val+1);
+                    setVal(val+step);
                 }}>
                 <strong>+</strong>
             </button>
