@@ -17,7 +17,7 @@ ul      { list-style-type: none; padding: 0; margin: 0; }
 .Card               { position: relative; z-index: 1; background: #fff; width: 100%; padding: 10px 10px 10px 15px; margin: 0 0 10px 0; overflow: auto; border: 1px solid #e5e5df; border-radius: 3px; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
 .Card__Title        { font-weight: bold; border-bottom: solid 5px transparent; }
 .Card__Title:before { display: inline-block; width: 1em; content: '▸'; }
-.Card__Title--is-open:before { content: '▾'; }
+.Card__Title__open:before { content: '▾'; }
 
 .TaskList__Task:first-child    { margin-top: 10px; padding-top: 10px; border-top: dashed 1px #ddd; }
-.TaskList__Task--remove:after  { display: inline-block; color: #d66; content: '✖'; }
+.TaskList__Task__remove:after  { display: inline-block; color: #d66; content: '✖'; }
