@@ -8,6 +8,8 @@ export default function Form() {
     const [validEmail, setValidEmail] = useState(false);
     const [gender, setGender] = useState('male');
     const [birthYear, setBirthYear] = useState('');
+    const [description, setDescription] = useState('');
+    const [agreeProv, setAgreeProv] = useState('no');
 
     const onChangeName = (e) => {
         // setName(e.target.value);
@@ -61,12 +63,21 @@ export default function Form() {
                 <option value='1990'>1990년</option>
             </select>
 
-            <label htmlFor="birthYear">자기소개</label>
-            <textarea/>
+            <label htmlFor="description">자기소개</label>
+            <textarea id={'description'} value={description} onChange={e => setDescription(e.target.value)}/>
 
             <fieldset>
                 <legend>약관동의</legend>
-                <input id="agree-prov" type="checkbox" name="agreeProv" value= { "yes" } defaultChecked={ false } />
+                <input 
+                    id="agree-prov"
+                    type="checkbox"
+                    name="agreeProv"
+                    value= {agreeProv}
+                    defaultChecked={agreeProv === 'yes'}
+                    onChange={e => {
+                        const val = e.target.value === 'yes' ? 'no' : 'yes';
+                        setAgreeProv(val);
+                    }}/>
                 <label>서비스 약관에 동의합니다.</label>
             </fieldset>
 
