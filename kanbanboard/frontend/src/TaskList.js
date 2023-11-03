@@ -18,12 +18,7 @@ const TaskList = ({tasks}) => {
             <input
                 type='text'
                 placeholder={'태스크 추가'}
-                className={styles.TaskList__add_task}
-                onKeyDown={(e) => {
-                    if(e.key === 'Enter') {
-                        console.log('task 추가');       
-                    }
-                }}/>
+                className={styles.TaskList__add_task}/>
         </div>
     );
 };
