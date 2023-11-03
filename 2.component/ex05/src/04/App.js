@@ -15,12 +15,10 @@ export default function App() {
     }, []);
 
     return (
-        <>
-            <Clock
-                message={`ex04: ticks ${ticks}`}
-                hours={'15'}
-                minutes={'04'}
-                seconds={'02'}/>
-        </>        
+        <Clock
+            message={`ex04: ticks ${ticks}`}
+            hours={'15'}
+            minutes={'04'}
+            seconds={'02'}/>
     );
 }
