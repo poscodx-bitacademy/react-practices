@@ -8,6 +8,16 @@
 **/.classpath
 **/.project
 
+## maven
+**/target/
+**/build/
+**/out
+
+## eclipse
+**/.settings
+**/.classpath
+**/.project
+
 ## node
 **/node_modules
 
