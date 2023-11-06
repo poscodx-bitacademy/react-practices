@@ -5,7 +5,12 @@ import './assets/scss/Clock.scss';
 
 export default function Clock({message, hours, minutes, seconds}) {
 
-
+    useEffect(() => {
+        console.log("clock: componentDidMount");
+        return () => {
+            console.log("clock: componentWillUnmount");
+        }
+    }, []);
 
     return (
         <div className={'clock-display'}>
