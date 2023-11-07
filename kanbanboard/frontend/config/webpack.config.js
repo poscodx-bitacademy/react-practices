@@ -44,7 +44,11 @@ module.exports = function(env) {
             port: 9090,
             liveReload: true,
             compress: true,
-            hot: false
+            hot: false,
+            proxy: {
+                '/api': 'http://localhost:8080'
+            },
+            historyApiFallback: true            
         }    
     };
 }
