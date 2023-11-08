@@ -2,7 +2,7 @@ import React from 'react';
 import Task from './Task';
 import styles from './assets/css/TaskList.css';
 
-const TaskList = ({tasks}) => {
+const TaskList = ({tasks, addTask, changeTaskDone}) => {
     return (
         <div>
             <ul>
@@ -11,13 +11,20 @@ const TaskList = ({tasks}) => {
                                         key={task.no}
                                         no={task.no}                                        
                                         name={task.name}
-                                        done={task.done} />)
+                                        done={task.done}
+                                        changeTaskDone={changeTaskDone} />)
                 }
             </ul>
             <input
                 type='text'
                 placeholder={'태스크 추가'}
-                className={styles.TaskList__add_task}/>
+                className={styles.TaskList__add_task}
+                onKeyDown={(e) => {
+                    if(e.key === 'Enter') {
+                        addTask(e.target.value);
+                        e.target.value = '';
+                    }
+                }}/>
         </div>
     );
 };
