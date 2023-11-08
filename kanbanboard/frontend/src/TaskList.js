@@ -2,7 +2,7 @@ import React from 'react';
 import Task from './Task';
 import styles from './assets/css/TaskList.css';
 
-const TaskList = ({tasks, addTask, changeTaskDone}) => {
+const TaskList = ({tasks, addTask, changeTaskDone, deleteTask}) => {
     return (
         <div>
             <ul>
@@ -12,7 +12,8 @@ const TaskList = ({tasks, addTask, changeTaskDone}) => {
                                         no={task.no}                                        
                                         name={task.name}
                                         done={task.done}
-                                        changeTaskDone={changeTaskDone} />)
+                                        changeTaskDone={changeTaskDone} 
+                                        deleteTask={deleteTask} />)
                 }
             </ul>
             <input

@@ -7,6 +7,33 @@ const Card = ({no, title, description}) => {
     const [showDetails, setShowDetails] = useState(false);
     const [tasks, setTasks] = useState([]);
 
+    const deleteTask = async (taskNo) => {
+//        console.log(taskNo);
+        try {
+            const response = await fetch(`/api/task/${taskNo}`, {
+                method: 'delete',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if(!response.ok) {
+                throw new Error(`${response.status} ${response.statusText}`)
+            }
+
+            const json = await response.json();
+
+            if(json.result !== 'success') {
+                throw new Error(`${json.result} ${json.message}`)
+            }
+
+            const newTasks = tasks.filter(task => task.no !== json.data);
+            setTasks(newTasks);
+        } catch(err) {
+            console.error(err);
+        }
+    } 
+
     const changeTaskDone = async (taskNo, done) => {
         // console.log(taskNo, done);
         try {
@@ -123,7 +150,8 @@ const Card = ({no, title, description}) => {
                     <TaskList
                         tasks={tasks}
                         addTask={addTask}
-                        changeTaskDone={changeTaskDone}/>
+                        changeTaskDone={changeTaskDone}
+                        deleteTask={deleteTask} />
                 </div>:
                 null
             }   
