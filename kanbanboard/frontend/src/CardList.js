@@ -11,8 +11,7 @@ const CardList = ({title, cards}) => {
                                     key={card.no}
                                     no={card.no}
                                     title={card.title}
-                                    description={card.description}
-                                    tasks={card.tasks}/>)
+                                    description={card.description}/>)
             }
         </div>
     );

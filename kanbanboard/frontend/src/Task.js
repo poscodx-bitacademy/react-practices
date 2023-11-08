@@ -6,7 +6,7 @@ const Task = ({no, name, done}) => {
         <li className={styles.TaskList__Task}>
             <input
                 type='checkbox'
-                checked={done}
+                checked={done === 'Y'}
                 onChange={e => {}}/>
             {name}    
             <a href='#' className={styles.TaskList__Task__remove} />
