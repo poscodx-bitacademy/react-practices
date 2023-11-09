@@ -1,15 +1,16 @@
 import React from 'react';
-import Header from "../layout/Header";
-import Navigation from "../layout/Navigation";
-import Footer from "../layout/Footer";
+import {Outlet} from 'react-router';
+import Header from "./Header";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
 import styles from '../assets/scss/layout/Content.scss';
 
-export default function SiteLayout({children}) {
+export default function SiteLayout() {
     return (
         <>
             <Header/>
             <div className={styles.Content}>
-                {children}
+                <Outlet />
             </div>
             <Navigation/>
             <Footer/>
