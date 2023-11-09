@@ -33,4 +33,5 @@
 2) Dashboard > Jenkins 관리 > System
    - 실행서버(SSH server) 등록: springboot-publish-server
    - 프로젝트의 빌드후조치(post-build action)의 send build artifacts over ssh 설정
-     1. emaillist.jar: transfer 
+     1. emaillist.jar: transfer
+     2. launch.sh: transfer + execution 
