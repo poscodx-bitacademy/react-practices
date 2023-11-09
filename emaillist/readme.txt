@@ -26,7 +26,11 @@
 
 5)  접속 테스트
     # ssh -i mykey.pem root@192.168.0.172
-
+6)  접속 연결
+    ~/.ssh/environment
+    =======
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/poscodx2023/java/bin:/usr/local/poscodx2023/git/bin:/usr/local/poscodx2023/maven/bin:/usr/local/poscodx2023/mariadb/bin:/root/bin        
+    =======
 3-2. deploy: Publish Over SSH 플러그인(Jenkins)
 
 1) Publish Over SSH 플러그인 설치
