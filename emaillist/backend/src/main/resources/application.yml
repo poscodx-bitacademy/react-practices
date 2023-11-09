@@ -2,13 +2,13 @@
 spring:
    application:
       name: emaillist
-   
-   # devtools - live reload
-   devtools:
-      livereload:
-         enabled: true
-            
-   #mvc
+   profiles:
+      active: development
+      
+      
+---
+# common spring boot configuration
+spring:
    mvc:
       static-path-pattern: /assets/**
       throw-exception-if-no-handler-found: true
@@ -22,8 +22,29 @@ spring:
       mode: HTML5
       suffix : .html
       cache : false
+
+mybatis:
+   config-location: classpath:mybatis/configuration.xml
+
+logging:
+   pattern:
+      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
+   level:
+      root: INFO
+
+
+
+---
+# development profile: spring boot configuration
+spring:
+   config:
+      activate:
+         on-profile: development
+
+   devtools:
+      livereload:
+         enabled: true
                      
-   #datasource
    datasource:
       driver-class-name: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://192.168.0.172:3307/webdb?charset=utf8
@@ -32,12 +53,7 @@ spring:
       hikari:
          minimum-idle: 10
          maximum-pool-size: 20
-
-# mybatis
-mybatis:
-   config-location: classpath:mybatis/configuration.xml
    
-# server
 server:
    port: 8080
    servlet:
@@ -46,9 +62,29 @@ server:
          charset: utf-8
          enabled: true
          
-# logging
-logging:
-   pattern:
-      console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n"
-   level:
-      root: INFO
+
+
+---
+# production profile: spring boot configuration
+spring:
+   config:
+      activate:
+         on-profile: production
+
+   datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://192.168.0.172:3307/webdb?charset=utf8
+      username: webdb
+      password: webdb
+      hikari:
+         minimum-idle: 10
+         maximum-pool-size: 20
+         
+server:
+   port: 8088
+   servlet:
+      context-path: /
+      encoding:
+         charset: UTF-8
+         enabled: true
+

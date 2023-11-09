@@ -67,7 +67,6 @@ server:
          enabled: true
          
 ---
-
 # production profile: spring boot configuration
 spring:
    config:
