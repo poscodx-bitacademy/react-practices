@@ -10,7 +10,7 @@
     "build:be": "cd ../backend && mvn clean package",
     "dev:be": "cd ../backend && mvn spring-boot:run",
   
-    "build:fe": "npx webpack --config config/webpack.config.js --mode production",
+    "build:fe": "npm install && npx webpack --config config/webpack.config.js --mode production",
     "dev:fe": "npx webpack serve --config config/webpack.config.js --progress --mode development"
   },
   "keywords": [],
